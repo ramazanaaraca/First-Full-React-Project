@@ -27,7 +27,7 @@ const ForgotPass = () => {
                             />
                         </div>
                         <div className='flex flex-col items-start mt-5'>
-                        <Button title='Change the password' />
+                        <Button>Change the password</Button>
                         </div>
                     
                 </LoginWrapper>      

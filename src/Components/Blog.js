@@ -40,9 +40,7 @@ const Blog = () => {
                         <div className='flex items-center lg:items-start  flex-col gap-6 w-full '>
                             <h2 className='lg:text-[55px] text-[40px] font-medium text-center lg:text-start leading-[50px] w-full  '>Latest from our
                             blog & customers</h2>
-                            <Button
-                            title='Read all stories' 
-                            />
+                            <Button>Read all stories</Button>
                         </div>
                         <img className='lg:ms-10 ms-0' width='335px' src={Book} alt="" /> 
                     </div>

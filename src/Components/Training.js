@@ -78,9 +78,7 @@ const Training = ({info , title , paragraf , cards , border , detail , children 
                         {
                             detail ? null : <div className='col-span-4 justify-self-end self-end max-lg:mt-5'>
                                             <Link to='detail'>
-                                                <Button
-                                                title='Learn more'
-                                                />
+                                                <Button>Learn more</Button>
                                             </Link>
                                             
                                     </div>

@@ -41,9 +41,8 @@ const Contact = () => {
                     For='me' 
                     LabelName='Your Message'/>
                 </div>
-                <Button 
-                title='Send'
-                />
+                <Button>Send</Button> 
+                
                
             </form>
         </div>

@@ -12,9 +12,7 @@ const Sitetitle = ({title, custom, head }) => {
     <div className='max-container'>
         <div className={combinedClassname}>
             <h2 className={titleClassname}>{title}</h2>
-            <Button
-            title='See All Trainings' 
-            />
+            <Button>See All Trainings</Button>
         </div>
     </div>
   )

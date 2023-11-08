@@ -51,7 +51,7 @@ const Register = () => {
                         </div>
                         <div className='flex flex-col items-start mt-5'>
                             <div className='relative right-3 mb-5'><CheckboxRippleEffect labelName='I have read and accept the' linkOne='terms and conditions and' linkTwo='the privacy policy.'/></div>
-                            <Button title='Login' />
+                            <Button>Login</Button>
                         </div>
                     
                 </LoginWrapper>      

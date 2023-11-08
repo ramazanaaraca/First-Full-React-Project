@@ -69,7 +69,7 @@ const Login = () => {
                         </div>
                     <div className='flexBetween max-lg:flex-col  mt-[36px]'>
                         <div className='relative right-3'><CheckboxRippleEffect labelName='Remember Password'/></div>
-                        <Button title='Login'  />
+                        <Button>Login</Button>
                     </div>
                     <Link to='ForgotPassword' className='text-base font-normal underline text-[#E43D30]'>
                     Forgot Your Password?
@@ -86,7 +86,7 @@ const Login = () => {
                             />
                         </div>
                     <div className=' mt-[36px]'>
-                        <Button type="submit" navigate title='Next Step' />
+                        <Button type="submit" navigate>Next Step</Button>
                     </div>
                 </LoginWrapper>      
             </form>

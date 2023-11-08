@@ -34,7 +34,7 @@ const TrainingDetail = ({traniningRow = 0 , TrainingCol = 1 }) => {
         >
           <div className='my-14'>
           {
-            user ? <Link to='/Login'><Button title='Buy' /></Link> : <Link to='/Login'><Button title='Register now' /></Link>
+            user ? <Link to='/Login'><Button>Buy</Button></Link> : <Link to='/Login'><Button>Register now</Button></Link>
           }
           </div>
         
@@ -71,9 +71,7 @@ const TrainingDetail = ({traniningRow = 0 , TrainingCol = 1 }) => {
               LabelName='Phone Number'
               />
               <div className='mt-[36px]'>
-                <Button
-                title='Send'
-                />
+                <Button>Send</Button>
               </div>
             </div>
           </form>

@@ -42,7 +42,7 @@ const About = ({otherPage = 'button2' , changeButton = true , order}) => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 )}
-                {otherPage === 'button' && <Button title='Read More' />}
+                {otherPage === 'button' && <Button>Read More</Button>}
             </div>
         </div>
             

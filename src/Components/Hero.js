@@ -16,10 +16,10 @@ const Heros = () => {
                         <p className='font-base text-xl text-white mt-5 mb-7'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
                         <div className='flex items-center gap-5'>
                             <Button
-                            title='Get Started'
                             type='button'
-                            icon={Arrow}
-                            />
+                            icon={Arrow} >
+                              Get Started  
+                            </Button>
                             <img
                             className='cursor-pointer' 
                             src={Play} 

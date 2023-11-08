@@ -16,9 +16,7 @@ const NotFound = () => {
             <p className=' text-lg font-light mb-[38px]'>
             This page doesn’t exist or was removed! we suggest you back to home.
             </p>
-            <Button
-            title='Back to home' 
-            />
+            <Button>Back to home</Button>
         </div>
         <div className=''>
             <img src={img404} alt="404" />

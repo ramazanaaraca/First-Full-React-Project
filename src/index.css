@@ -1,13 +1,243 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base; 
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./assets/font/Aeonik-MediumItalic.woff2') format('woff2'),
+      url('./assets/font/Aeonik-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./assets/font/Aeonik-Medium.woff2') format('woff2'),
+      url('./assets/font/Aeonik-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./assets/font/Aeonik-Regular.woff2') format('woff2'),
+      url('./assets/font/Aeonik-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./assets/font/Aeonik-RegularItalic.woff2') format('woff2'),
+      url('./assets/font/Aeonik-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./assets/font/Aeonik-ThinItalic.woff2') format('woff2'),
+      url('./assets/font/Aeonik-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik Air';
+  src: url('./assets/font/Aeonik-AirItalic.woff2') format('woff2'),
+      url('./assets/font/Aeonik-AirItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik Air';
+  src: url('./assets/font/Aeonik-Air.woff2') format('woff2'),
+      url('./assets/font/Aeonik-Air.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./assets/font/Aeonik-Thin.woff2') format('woff2'),
+      url('./assets/font/Aeonik-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./assets/font/Aeonik-Black.woff2') format('woff2'),
+      url('./assets/font/Aeonik-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./assets/font/Aeonik-LightItalic.woff2') format('woff2'),
+      url('./assets/font/Aeonik-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./assets/font/Aeonik-Bold.woff2') format('woff2'),
+      url('./assets/font/Aeonik-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./assets/font/Aeonik-BlackItalic.woff2') format('woff2'),
+      url('./assets/font/Aeonik-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./assets/font/Aeonik-BoldItalic.woff2') format('woff2'),
+      url('./assets/font/Aeonik-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./assets/font/Aeonik-Light.woff2') format('woff2'),
+      url('./assets/font/Aeonik-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Aeonik';
+}
+
+.max-container {
+  @apply mx-auto max-w-[1320px] px-6;
+}
+
+.flexCenter {
+  @apply flex items-center justify-center;
+}
+
+.flexBetween {
+  @apply flex items-center justify-between;
+}
+
+.flexStart {
+  @apply flex items-center justify-start;
+}
+
+.flexEnd {
+  @apply flex items-center justify-end;
+}
+
+.hero-overlay::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.60) 13.99%, rgba(0, 0, 0, 0.00) 48.58%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  border-radius: 24px;
+  
+}
+
+.hero {
+  background-image: url(../src/assets/img/hero_background_img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 776px;
+  width: 100%;
+ 
+}
+
+.solution-bg {
+  background-image: url(../src/assets/img/solution_img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 472px;
+  width: 100%;
+}
+
+.solution-bg::before {
+  content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: -99;
+    position: absolute;
+    bottom: 0;
+    border-radius: 20px;
+}
+
+.breadcumb {
+  background-image: url(../src/assets/img/other_page_hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  border-radius: 24px;
+}
+
+.breadcumb::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: -99;
+  position: absolute;
+  bottom: 0;
+  border-radius: 20px;
+}
+
+.corner div:nth-child(1) {
+  border-radius: 10px 0 0 0px;
+}
+
+.corner div:nth-child(2) {
+  border-radius: 0 10px 0 0;
+} 
+
+.corner div:nth-child(3) {
+  border-radius:  0 0 0 10px;
+} 
+
+.corner div:nth-child(4) {
+  border-radius: 0px 0 10px 0px;
+}
+

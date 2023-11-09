@@ -166,9 +166,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  
   border-radius: 24px;
-  
+  @apply max-lg:bg-[#0000006e]
 }
 
 .hero {
@@ -178,8 +177,10 @@ body {
   background-size: cover;
   height: 776px;
   width: 100%;
- 
+  @apply max-lg:h-[550px]
 }
+
+
 
 .solution-bg {
   background-image: url(../src/assets/img/solution_img.png);

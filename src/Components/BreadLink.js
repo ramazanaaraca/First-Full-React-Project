@@ -9,7 +9,7 @@ const BreadLink = ({pageName , mainTitle , className}) => {
     <div className={`flexCenter pt-10 ${className}`}>
       <ul className='flex items-center gap-4 bg-[#FDF3F3] py-1 px-7 rounded-full'>
           <li>
-              <Link to="/Home" className=' text-xs font-normal text-[#E43D30]'>Homepage</Link>
+              <Link to="/" className=' text-xs font-normal text-[#E43D30]'>Homepage</Link>
           </li>
           <li>
             <img src={Arrowİcon} alt="" />

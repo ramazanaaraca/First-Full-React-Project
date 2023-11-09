@@ -11,9 +11,9 @@ const Footer = ({label }) => {
                 <a href="/">
                 <img
                     src={Logo} 
-                    alt="aviza-logo" 
-                    width="251px" 
-                    height="40px" />
+                    alt="aviza-logo"  
+                    height="40px"
+                    className='lg:w-[251px] w-[220px]' />
                     </a>
                 <nav className='flex items-center gap-9'>
                     {Social.map((icons , index) => (
@@ -23,14 +23,14 @@ const Footer = ({label }) => {
                     ))}    
                 </nav>
             </div>
-            <div className='grid lg:grid-cols-2 gap-[100px] pb-[70px]'>
+            <div className='grid lg:grid-cols-2 lg:gap-[100px] gap-[60px] pb-[40px] lg:pb-[70px]'>
                 <div className='text-white max-lg:text-center'>
-                    <h4 className='font-medium text-3xl mb-3'>About Us</h4>
-                    <p className='font-light text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                    <h4 className='font-medium lg:text-3xl text-2xl mb-3'>About Us</h4>
+                    <p className='font-light lg:text-base text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
                     </p>
                 </div>
                 <div className='text-white'>
-                    <h4 className='font-medium text-3xl mb-3 max-lg:text-center'>Aviza Academy</h4>
+                    <h4 className='font-medium lg:text-3xl text-2xl mb-3 max-lg:text-center'>Aviza Academy</h4>
                     <nav>
                         <ul className='flex items-center flex-wrap justify-between gap-5 max-lg:text-center'>
                             {FooterNav.map((link,index) => (
@@ -49,12 +49,12 @@ const Footer = ({label }) => {
                 </div>
             </div>
             <div className='border-t  border-[#ffffff41] text-white flex items-center gap-10 pt-5 pb-8 max-lg:flex-col max-lg:gap-2'>
-               <p className='font-light text-base'>
+               <p className='font-light lg:text-base text-xs'>
                © 2022 Aviza Academy. All rights reserved.
                 </p>
-                <a href="" className='font-light text-base'>Code of Conduct</a>
-                <a href="" className='font-light text-base'>Privacy Policy</a>
-                <a href="" className='font-light text-base'>Cookie Declaration</a>                
+                <a href="" className='font-light lg:text-base text-xs'>Code of Conduct</a>
+                <a href="" className='font-light lg:text-base text-xs'>Privacy Policy</a>
+                <a href="" className='font-light lg:text-base text-xs'>Cookie Declaration</a>                
             </div>
         </div>
     </footer>

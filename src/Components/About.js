@@ -34,7 +34,7 @@ const About = ({otherPage = 'button2' , changeButton = true , order}) => {
         </div>
         <div className='col-span-1 '>
             <div className='gap-5 flex flex-col items-start justify-end h-full'>
-                <h2 className=' text-[40px] lg:text-[55px] leading-[50px] lg:leading-[63px] font-medium text-black max-w-[300px] '>About Aviza Academy</h2>
+                <h2 className=' text-[36px] lg:text-[55px] leading-[40px] lg:leading-[63px] font-medium text-black max-w-[300px] '>About Aviza Academy</h2>
                 <p className={`text-base font-normal text-black  ${otherPage ? 'mb-5' : 'mb-1'}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
                 {otherPage === 'button2' && <Button2 toPage='/About' />}
                 {otherPage === 'paragraf' && (

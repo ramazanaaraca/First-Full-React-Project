@@ -5,14 +5,22 @@ import User from '../assets/img/black_person.svg';
 import Dropdown from './Dropdown';
 import { Link, NavLink } from 'react-router-dom';
 import { useAuth } from '../Context/AuthContext';
-import { button } from '@material-tailwind/react';
+import {FiMenu , FiX} from 'react-icons/fi'
+import { useState } from 'react';
+import classNames from 'classnames';
 
 const  Header = () => {
 
   const { user , setUser } = useAuth()
+  const [menu , setMenu] = useState(false)
   
   const handleOut = () => {
     setUser(false)
+  }
+
+  const handleMenu = () => {
+    setMenu((openMenu) => !openMenu)
+    console.log(menu)   
   }
 
   const NavProps = [
@@ -24,7 +32,7 @@ const  Header = () => {
   ];  
 
   return (
-    <header className='py-6'>
+    <header className='py-6 relative'>
         <div className='max-container'>
             <div className='flexBetween'>
                 <div>
@@ -32,12 +40,16 @@ const  Header = () => {
                     <img 
                     src={Logo} 
                     alt="aviza-logo" 
-                    width="251px" 
+                    className='lg:w-[251px] w-[190px] z-[999] relative' 
                     height="40px" />
                     </Link>
                 </div>
-                <nav className=''>
-                    <ul className='hidden lg:flex items-center gap-10'>
+                <nav className='max-lg:fixed max-lg:left-0 max-lg:top-0 max-lg:bg-white max-lg:z-[99] max-lg:h-[100vh] max-lg:py-[60px]'>
+                    <ul className={classNames ({
+                        'hidden  lg:flex items-center gap-10' : true,
+                        '!flex max-lg:flex-col max-lg:px-[90px]' : menu,
+                        'hidden px-0': !menu
+                    })}>
                     {NavProps.map((navlist, index) => (
                         <li key={index}>
                             <NavLink 
@@ -50,37 +62,69 @@ const  Header = () => {
                     ))
                     }
                     </ul>
-                </nav>
-                <div className='flex items-center gap-6'>
-                    <div>
-                        <NavLink to='/Search'>
-                            <img 
-                            className='cursor-pointer hidden xl:inline'
-                            src={Search} 
-                            alt="search icon"
-                            width=''
-                            height='' />
-                        </NavLink>
+                    </nav>
+                    <div className='flex items-center gap-6'>
+                        <div>
+                            <NavLink to='/Search'>
+                                <img 
+                                className='cursor-pointer xl:inline'
+                                src={Search} 
+                                alt="search icon"
+                                width=''
+                                height='' />
+                            </NavLink>
+                        </div>
+                        <div className='hamburger block lg:hidden' onClick={handleMenu}>
+                            {
+                                menu ? 
+                                <FiX
+                                className='cursor-pointer' 
+                                size={30}/> 
+                                :
+                                <FiMenu
+                                className='cursor-pointer' 
+                                size={30}/>   
+                            }
+                        </div>
+                    {
+                        user ?
+                        <NavLink onClick={handleOut} to='/Login' 
+                        className={classNames
+                            ({
+                                'hidden lg:flex items-center gap-5  rounded-full  text-white duration-300 hover:text-[#E43D30] max-lg:mx-[70px]   max-lg:fixed max-lg:left-0 max-lg:z-[99] max-lg:top-[400px] ' : true ,
+                                '!flex' : menu,
+                                'hidden': !menu
+                            })
+                        }>
+                        <img
+                        className='bg-[#F2F2F2] p-2 rounded-full' 
+                        src={User}
+                        alt="user" />
+                        <div className='font-normal text-sm underline text-black'>Ramazank</div>
+                        </NavLink> 
+                        : <NavLink to='/Login' 
+                        className={classNames
+                        ({
+                            'hidden lg:flex items-center gap-5 py-[8px] px-[13px] max-lg:mx-[55px]  rounded-full bg-black text-white duration-300 hover:text-[#E43D30] max-lg:fixed max-lg:left-0 max-lg:z-[99] max-lg:top-[400px] ' : true,
+                            '!flex' : menu,
+                            'hidden': !menu
+                        })
+                        }>
+                        <div className='font-normal text-sm '>Login / Register</div>
+                        <img
+                        className='bg-white p-2 rounded-full' 
+                        src={User}
+                        alt="user" />
+                    </NavLink>
+                    }
+                        <Dropdown
+                        className={
+                            classNames ({
+                                'max-lg:fixed max-lg:left-0 max-lg:z-[99] max-lg:top-[400px]' : true
+                            })
+                        }
+                        />
                     </div>
-                   {
-                    user ?
-                    <NavLink onClick={handleOut} to='/Login' className='flex items-center gap-5  rounded-full  text-white duration-300 hover:text-[#E43D30]'>
-                    <img
-                    className='bg-[#F2F2F2] p-2 rounded-full' 
-                    src={User}
-                    alt="user" />
-                    <div className='font-normal text-sm underline text-black'>Ramazank</div>
-                    </NavLink> 
-                    : <NavLink to='/Login' className='flex items-center gap-5 py-[8px] px-[13px] rounded-full bg-black text-white duration-300 hover:text-[#E43D30]'>
-                    <div className='font-normal text-sm '>Login / Register</div>
-                    <img
-                    className='bg-white p-2 rounded-full' 
-                    src={User}
-                    alt="user" />
-                </NavLink>
-                   }
-                    <Dropdown />
-                </div>
             </div>
         </div>
     </header>

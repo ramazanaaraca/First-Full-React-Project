@@ -16,14 +16,20 @@ const Home = () => {
         Parent='mt-[148px]'
         />
         <Sitetitle
+        toPage='/Trainings'
         title='Discover our training'
         />
         <Discover />
         <Sitetitle
+        toPage='/Trainings'
         title='Discover our exams'
         />
-        <Exams />
-        <Blog />
+        <Exams
+        
+         />
+        <Blog
+        toPage='/News'
+        />
         <Solution />
     </>
   )

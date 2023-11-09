@@ -49,10 +49,6 @@ const routes = [
                         path: 'categories' , 
                         element:<NewsDetail /> 
                     },
-                    {
-                        path: "*" , 
-                        element:<NotFound /> 
-                    }
                 ] 
             },
             {
@@ -67,10 +63,6 @@ const routes = [
                         path: 'detail' , 
                         element:<TrainingDetail /> 
                     },
-                    {
-                        path: "*" , 
-                        element:<TrainingDetail /> 
-                    }
                 ] 
             },
             {
@@ -103,6 +95,10 @@ const routes = [
                     }
                 ] 
             },
+            {
+                path: "*" , 
+                element:<NotFound /> 
+            }
         ]
     }
 ]

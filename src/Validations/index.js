@@ -1,2 +1,2 @@
-export {LoginSchema} from "./LoginChema";
+export {LoginSchema , CreateSchema , ContactSchema , NewsSchema } from "./LoginChema";
 

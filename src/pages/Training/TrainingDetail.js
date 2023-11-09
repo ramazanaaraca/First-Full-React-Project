@@ -10,6 +10,8 @@ import Female from '../../assets/img/female_person.png'
 import Input from '../../Components/Input'
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../Context/AuthContext'
+import { Formik , Form} from 'formik'
+import { NewsSchema } from '../../Validations/NewsChema'
 
 const TrainingDetail = ({traniningRow = 0 , TrainingCol = 1 }) => {
 
@@ -52,29 +54,56 @@ const TrainingDetail = ({traniningRow = 0 , TrainingCol = 1 }) => {
         </div>
         <div className='col-span-1 py-[40px] px-[80px]'>
           <h2 className=' text-[32px] font-medium text-black mb-[36px] leading-[32px]'>Don’t hesitate to get information.</h2>
-          <form  action="">
-            <div className='grid lg:grid-cols-2 gap-3'> 
-              <Input 
-              AttName='input'
-              LabelName='Name'
-              />
-              <Input 
-              AttName='input'
-              LabelName='Surname'
-              />
-              <Input 
-              AttName='input'
-              LabelName='E-Mail Address'
-              />
-              <Input 
-              AttName='input'
-              LabelName='Phone Number'
-              />
-              <div className='mt-[36px]'>
-                <Button>Send</Button>
-              </div>
-            </div>
-          </form>
+          <Formik
+          initialValues={{
+            email:'',
+            userName:'',
+            userSurname:'',
+            phone:'',
+          }}
+
+          onSubmit= { ( values  , {resetForm}) => {
+            console.log(values)
+            resetForm();
+          }}
+          
+          validationSchema={NewsSchema}
+
+          >
+            
+              {({values}) => (
+                <Form>
+                  <div className='grid lg:grid-cols-2 gap-3'> 
+                  <Input
+                  value={values.userName}
+                  name='userName' 
+                  LabelName='Name'
+                  />
+                  <Input
+                  value={values.userSurname}
+                  name='userSurname' 
+                  LabelName='Surname'
+                  />
+                  <Input
+                  value={values.email} 
+                  name='email'
+                  LabelName='E-Mail Address'
+                  />
+                  <Input
+                  value={values.phone} 
+                  name='phone'
+                  LabelName='Phone Number'
+                  />
+                  <div className='mt-[36px]'>
+                    <Button type='submit'>Send</Button>
+                  </div>
+                </div>
+              </Form>
+              )}
+
+              
+            
+          </Formik>
         </div>
       </div>  
     </div>   

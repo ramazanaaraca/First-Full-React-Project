@@ -44,7 +44,7 @@ const  Header = () => {
                     height="40px" />
                     </Link>
                 </div>
-                <nav className='max-lg:fixed max-lg:left-0 max-lg:top-0 max-lg:bg-white max-lg:z-[99] max-lg:h-[100vh] max-lg:py-[60px]'>
+                <nav className='max-lg:fixed max-lg:left-0 max-lg:top-0  max-lg:z-[99] max-lg:h-[100vh] max-lg:py-[60px] bg-blue'>
                     <ul className={classNames ({
                         'hidden  lg:flex items-center gap-10' : true,
                         '!flex max-lg:flex-col max-lg:px-[90px]' : menu,

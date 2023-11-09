@@ -4,7 +4,6 @@ import LoginWrapper from '../../Components/LoginWrapper'
 import Input from '../../Components/Input'
 import Breadcumb from '../../Components/Breadcumb'
 import Button from '../../Components/Button'
-import CheckboxRippleEffect from '../../Components/CheckboxRippleEffect'
 import { Link, Outlet } from 'react-router-dom'
 import RadioDefault from '../../Components/Radio'
 

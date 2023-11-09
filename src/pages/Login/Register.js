@@ -4,9 +4,10 @@ import LoginWrapper from '../../Components/LoginWrapper'
 import Input from '../../Components/Input'
 import Breadcumb from '../../Components/Breadcumb'
 import Button from '../../Components/Button'
-import CheckboxRippleEffect from '../../Components/CheckboxRippleEffect'
 import { Link, Outlet } from 'react-router-dom'
 import RadioDefault from '../../Components/Radio'
+import Checkboxx from '../../Components/Checkboxx'
+
 
 const Register = () => {
   return (
@@ -50,7 +51,7 @@ const Register = () => {
                             />
                         </div>
                         <div className='flex flex-col items-start mt-5'>
-                            <div className='relative right-3 mb-5'><CheckboxRippleEffect labelName='I have read and accept the' linkOne='terms and conditions and' linkTwo='the privacy policy.'/></div>
+                            <div className='relative right-3 mb-5'><Checkboxx /></div>
                             <Button>Login</Button>
                         </div>
                     

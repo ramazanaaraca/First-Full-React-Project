@@ -4,6 +4,7 @@ import Blogpic from '../assets/img/blog_img.png';
 import Card from './Card';
 import Button from './Button';
 import { Link } from 'react-router-dom';
+import { scrollTop } from './ScrollTop';
 
 const Blog = ({toPage}) => {
 
@@ -42,13 +43,7 @@ const Blog = ({toPage}) => {
                             <h2 className='lg:text-[55px] text-[36px] font-medium text-center lg:text-start leading-[40px] w-full  '>Latest from our
                             blog & customers</h2>
                             <Link
-                             onClick={() => {
-                                window.scroll({
-                                  top: 0,
-                                  left: 0,
-                                  behavior: "smooth",
-                                });
-                              }}
+                             onClick={scrollTop}
                             to={toPage}><Button>Read all stories</Button></Link>
                         </div>
                         <img className='lg:ms-10 ms-0 w-[260px] lg:w-[335px]'  src={Book} alt="blogimg" /> 

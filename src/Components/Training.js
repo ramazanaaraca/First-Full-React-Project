@@ -38,8 +38,8 @@ const Training = ({info , title , paragraf , cards , border , detail , children 
                 </div>
             </div>
             <div className={detail ? 'col-span-7' : 'col-span-8'}>
-                <div>
-                    <h5 className={`text-[30px] font-medium ${detail ? 'lg:w-[400px] leading-[36px] mb-5' : null}`}>{title}</h5>
+                <div className='max-lg:mt-3'>
+                    <h5 className={`lg:text-[30px] text-[26px] max-lg:leading-8 font-medium ${detail ? 'lg:w-[400px] leading-[36px] mb-5' : null}`}>{title}</h5>
                     <p className={` text-base font- normal capitalize mb-5 ${detail ? 'mb-10' : null}`} >{paragraf}</p>
                     <div className='grid lg:grid-cols-3 items-start  gap-2 mb-[20px]'>
                         {
@@ -61,7 +61,7 @@ const Training = ({info , title , paragraf , cards , border , detail , children 
                         null 
                         }
                     </div>
-                    <div className='grid lg:grid-cols-12'>
+                    <div className='lg:grid lg:grid-cols-12'>
                         <div className={detail ? 'col-span-12' : 'col-span-8'}>
                             <div className='grid lg:grid-cols-2 corner'>
                                 {

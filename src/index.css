@@ -242,9 +242,13 @@ body {
   border-radius: 0px 0 10px 0px;
 }
 
-.bg-blue {
-  background: rgba( 220, 220, 220, 0.35 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 18.5px );
--webkit-backdrop-filter: blur( 18.5px );
+
+
+@media only screen and (max-width: 1023px) {
+  .bg-blue {
+    background: rgba( 220, 220, 220, 0.35 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 18.5px );
+  -webkit-backdrop-filter: blur( 18.5px );
+  }
 }

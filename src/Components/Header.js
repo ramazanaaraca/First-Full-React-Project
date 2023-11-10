@@ -8,6 +8,7 @@ import { useAuth } from '../Context/AuthContext';
 import {FiMenu , FiX} from 'react-icons/fi'
 import { useState } from 'react';
 import classNames from 'classnames';
+import { scrollTop } from './ScrollTop';
 
 const  Header = () => {
 
@@ -40,7 +41,7 @@ const  Header = () => {
                     <img 
                     src={Logo} 
                     alt="aviza-logo" 
-                    className='lg:w-[251px] w-[190px] z-[999] relative' 
+                    className='lg:w-[251px] w-[190px] ' 
                     height="40px" />
                     </Link>
                 </div>
@@ -53,6 +54,7 @@ const  Header = () => {
                     {NavProps.map((navlist, index) => (
                         <li key={index}>
                             <NavLink 
+                             onClick={scrollTop}
                             to={navlist.link}
                             className='font-normal text-base color-black duration-300 hover:text-[#E43D30]'
                             >

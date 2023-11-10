@@ -36,7 +36,7 @@ const Tab = () => {
  
 
   return (
-    <div className="flex items-start  gap-10 h-[240px] relative mb-[148px]">
+    <div className="flex items-start  gap-10 lg:h-[240px] sm:h-[300px] h-[500px] relative mb-[148px]">
         {
           EXAMPLES.map((tab) => (
             <div className="flex flex-col ">

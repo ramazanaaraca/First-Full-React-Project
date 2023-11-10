@@ -44,16 +44,16 @@ const TrainingDetail = ({traniningRow = 0 , TrainingCol = 1 }) => {
     ))
     }
     <Tab />
-    <div className='bg-[#F7F7F7] pt-[20px] rounded-[20px] mb-[148px]'>
+    <div className='bg-[#F7F7F7] pt-[20px] rounded-[20px] mb-[148px] '>
       <div className='grid lg:grid-cols-2 items-center'>
         <div className='col-span-1 max-lg:order-1'>
           <div className='flex items-end max-lg:justify-center'>
-            <img src={Female} alt="person" className='relative left-[60px] z-10' width='100%' />
-            <img src={Male} alt="person" className='relative right-[110px] ' width='100%'/>
+            <img src={Female} alt="person" className='relative lg:left-[60px] left-[50px] z-10 lg:w-full w-[220px] '  />
+            <img src={Male} alt="person" className='relative lg:right-[110px] right-[63px] lg:w-full w-[240px] ' />
           </div>
         </div>
-        <div className='col-span-1 py-[40px] px-[80px]'>
-          <h2 className=' text-[32px] font-medium text-black mb-[36px] leading-[32px]'>Don’t hesitate to get information.</h2>
+        <div className='col-span-1 py-[40px] lg:px-[80px] px-[20px]'>
+          <h2 className='lg:text-[32px] text-[26px] font-medium text-black mb-[36px] leading-[32px]'>Don’t hesitate to get information.</h2>
           <Formik
           initialValues={{
             email:'',

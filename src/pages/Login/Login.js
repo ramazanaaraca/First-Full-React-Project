@@ -66,7 +66,7 @@ const Login = () => {
                                     name='password'
                                     />
                                 </div>
-                            <div className='flexBetween max-lg:flex-col  mt-[36px]'>
+                            <div className='flexBetween max-lg:flex-col max-lg:items-start max-lg:gap-2 max-lg:mb-4 mt-[36px]'>
                                 <div><Checkboxx label='Remember Me' name='accept' /> </div>
                                 <Button  type='submit'>Login</Button>
                             </div>

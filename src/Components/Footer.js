@@ -1,7 +1,7 @@
 import Logo from '../assets/img/light_aviza_academy_logo.svg';
-import Facebook from '../assets/img/facebook.svg'
 import { Social } from '../data';
 import { FooterNav } from '../data';
+import { Link } from 'react-router-dom';
 
 const Footer = ({label }) => {
   return (
@@ -17,9 +17,9 @@ const Footer = ({label }) => {
                     </a>
                 <nav className='flex items-center gap-9'>
                     {Social.map((icons , index) => (
-                        <a key={index} href={label}>
-                            <img src={Facebook} alt="social" />
-                        </a>
+                        <Link key={index} href={label}>
+                            <img src={icons.icon} alt="social" />
+                        </Link>
                     ))}    
                 </nav>
             </div>

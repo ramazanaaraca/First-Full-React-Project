@@ -11,7 +11,7 @@ const Exams = () => {
         <div className='max-container'>
             <div className='grid lg:grid-cols-3 gap-4'>
                 {EXAMS_ITEMS.map((discover,index) => (
-                    <div className='col-span-1'>
+                    <div className='col-span-1' key={index}>
                         <Card
                         order='order-1 '
                         image={Crown}

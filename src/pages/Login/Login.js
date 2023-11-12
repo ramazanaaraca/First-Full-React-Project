@@ -1,5 +1,4 @@
 import React from 'react'
-import Wrapper from '../../Components/Wrapper'
 import LoginWrapper from '../../Components/LoginWrapper'
 import Input from '../../Components/Input'
 import Breadcumb from '../../Components/Breadcumb'
@@ -11,10 +10,11 @@ import { useFormik , Formik , Form} from 'formik';
 import Checkboxx from '../../Components/Checkboxx'
 import {LoginSchema} from '../../Validations/LoginChema'
 import { CreateSchema } from '../../Validations/CreateChema'
+import { scrollTop } from '../../Components/ScrollTop'
 
 const Login = () => {
 
-  const { setUser } = useAuth();
+  const { setUser , setMail } = useAuth();
 
   const navigate = useNavigate();
 
@@ -39,9 +39,8 @@ const Login = () => {
 
             onSubmit= { values => {
                 setUser(values)
-
-
                 navigate('/')
+                scrollTop()
             } }
 
             validationSchema={LoginSchema} //validasyon işlemi
@@ -54,7 +53,7 @@ const Login = () => {
                             <h3 className='text-3xl font-medium mb-[36px]'>I have an account</h3>
                                 <div className='flex flex-col gap-5'>
                                     <Input
-                                    value={values.firstName}
+                                    value={values.email}
                                     type='email'
                                     LabelName='E-Mail Address'
                                     name='email'
@@ -91,7 +90,9 @@ const Login = () => {
             }
 
             onSubmit= { values => {
-                setUser(values)
+                setMail(values)
+
+                navigate('Register')
             } }
 
             validationSchema={CreateSchema} //validasyon işlemi

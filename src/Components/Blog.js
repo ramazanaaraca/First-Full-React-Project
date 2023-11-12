@@ -52,7 +52,7 @@ const Blog = ({toPage}) => {
                 <div className='col-span-1 '>
                     <div className='flex flex-col gap-[40px]'>
                         {blogItems.map((discover,index) => (
-                        <div className='col-span-1'>    
+                        <div className='col-span-1' key={index}>    
                             <Card
                             custom='lg:flex-row flex-col bg-white !p-0 hover:!bg-white justify-between gap-5'
                             order='lg:order-1 order-2 '

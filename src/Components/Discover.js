@@ -12,10 +12,10 @@ const Discover = ({custom = 'max-lg:flex-col' , order='max-lg:order-1' , ForCol 
     <section className={className}>
       <div className='max-container'>
         <div className={`grid  gap-5 ${ForCol ? 'lg:grid-cols-3' : 'lg:grid-cols-2'}` }>
-          {discoverData.map((discover) => (
-            <div className='col-span-1' key={id}>
+          {discoverData.map((discover , index) => (
+            <div className='col-span-1' key={index}>
               <Card
-              text={text}
+              text={text} 
               custom={custom}
               order={order}
               discover={discover}

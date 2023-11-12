@@ -2,6 +2,7 @@ import React from 'react'
 import Wrapper from '../../Components/Wrapper'
 import Button from '../../Components/Button'
 import img404 from '../../assets/img/404_img.svg';
+import { Link } from 'react-router-dom';
 
 const NotFound = () => {
   return (
@@ -16,7 +17,7 @@ const NotFound = () => {
             <p className=' text-lg font-light mb-[38px]'>
             This page doesn’t exist or was removed! we suggest you back to home.
             </p>
-            <Button>Back to home</Button>
+            <Link to='/'><Button>Back to home</Button></Link>
         </div>
         <div className=''>
             <img src={img404} alt="404" />

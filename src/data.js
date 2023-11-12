@@ -1,3 +1,9 @@
+import Facebook from '../src/assets/img/facebook.svg'
+import Instagram from '../src/assets/img/instagram.svg'
+import Twitter from '../src/assets/img/twitter.svg'
+import Youtube from '../src/assets/img/youtube.svg'
+import Linkedln from '../src/assets/img/linkedln.svg'
+
 export const EXAMS_ITEMS = [
     {
       title: 'Banking intermediation',
@@ -21,20 +27,20 @@ export const EXAMS_ITEMS = [
   ];
 
 export const Social = [
-    {label:'/', icon:"../assets/img/facebook.svg"},
-    {label:'/', icon:"../assets/img/facebook.svg"},
-    {label:'/', icon:'../assets/img/facebook.svg'},
-    {label:'/', icon:'../assets/img/facebook.svg'},
-    {label:'/', icon:'../assets/img/facebook.svg'}
+    {label:'/', icon: Instagram },
+    {label:'/', icon: Twitter },
+    {label:'/', icon: Youtube },
+     {label:'/', icon: Linkedln },
+     {label:'/', icon: Facebook }
 ];
 
 export const FooterNav = [
-    {label:'/', namenav:"Trainings"},
-    {label:'/', namenav:"About Aviza"},
+    {label:'/Trainings', namenav:"Trainings"},
+    {label:'/About', namenav:"About Aviza"},
     {label:'/', namenav:'FAQ'},
     {label:'/', namenav:'Exams'},
-    {label:'/', namenav:'News'},
-    {label:'/', namenav:'Contact'}
+    {label:'/News', namenav:'News'},
+    {label:'/Contact', namenav:'Contact'}
 ];
 
 export const OUR_CARD = [

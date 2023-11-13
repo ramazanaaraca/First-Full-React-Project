@@ -1,5 +1,5 @@
 import React from 'react'
-import { DISCOVER_ITEMS, EXAMPLES, EXAMS_ITEMS } from '../../data'
+
 
 const Table = ({ data }) => {
 

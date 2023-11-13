@@ -1,7 +1,9 @@
+import { useParams } from 'react-router-dom'
 import '../index.css'
 import BreadLink from './BreadLink'
 
 const Breadcumb = ({breadBg , title , pageName , nonParagraf }) => {
+  
   return (
     <div>
             <div className={`${breadBg && 'breadcumb relative'}`}>

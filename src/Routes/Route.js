@@ -60,7 +60,7 @@ const routes = [
                         element:<TrainingPage /> 
                     },
                     {
-                        path: 'detail' , 
+                        path: ':slug' , 
                         element:<TrainingDetail /> 
                     },
                 ] 

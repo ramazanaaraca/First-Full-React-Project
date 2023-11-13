@@ -13,7 +13,7 @@ const Sitetitle = ({title, custom, head , toPage}) => {
     <div className='max-container'>
         <div className={combinedClassname}>
             <h2 className={titleClassname}>{title}</h2>
-            <Link to={toPage}><Button>See All Trainings</Button></Link>
+            <Link to={toPage}><Button ButtonName='div'>See All Trainings</Button></Link>
         </div>
     </div>
   )

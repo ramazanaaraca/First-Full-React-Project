@@ -9,7 +9,7 @@ const Button2 = ({title , icon , toPage}) => {
   
 
   return (
-    <Link to={toPage} className='flex items-center gap-3  text-black font-medium text-base rounded-full duration-300  group lg:text-base text-sm'>
+    <Link to={toPage} className='flex items-center gap-3  text-black font-medium  rounded-full duration-300  group lg:text-base text-sm'>
         {icon && <div className='bg-[#E43D30] p-2 rounded-full flexCenter duration-300 group-hover:bg-[#e43c30d2]'><img className='w-[15px] h-[15px]'  src={icon} alt="icon"   /></div>}
         {title}
     </Link>

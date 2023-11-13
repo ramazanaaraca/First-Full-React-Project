@@ -14,7 +14,8 @@ const TermOfUs = () => {
         />
         {
             TRAM_DATA.map((tram , index) => (
-                <NewsP 
+                <NewsP
+                key={index} 
                 {...tram}
                 />
             ))

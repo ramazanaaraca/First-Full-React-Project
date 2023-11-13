@@ -8,14 +8,16 @@ import BreadLink from "../../Components/BreadLink";
 import Male from '../../assets/img/male_person.png'
 import Female from '../../assets/img/female_person.png'
 import Input from '../../Components/Input'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useAuth } from '../../Context/AuthContext'
 import { Formik , Form} from 'formik'
 import { NewsSchema } from '../../Validations/NewsChema'
+import { scrollTop } from '../../Components/ScrollTop'
 
 const TrainingDetail = ({traniningRow = 0 , TrainingCol = 1 }) => {
 
   const {user} = useAuth()
+  const {slug} = useParams()
 
   return (
     <Wrapper
@@ -27,16 +29,17 @@ const TrainingDetail = ({traniningRow = 0 , TrainingCol = 1 }) => {
     mainTitle={TRAINING_DATA[0].title}
     className='mb-[40px]'
     />  
-
+    Training Detail : {slug}
     {
-    TRAINING_DATA.slice(traniningRow  , TrainingCol).map((detail) => (
+    TRAINING_DATA.slice(traniningRow  , TrainingCol).map((detail , index) => (
         <Training
-        detail={true} 
+        detail={true}
+        key={index} 
         {...detail}
         >
           <div className='my-14'>
           {
-            user ? <Link to='/Login'><Button>Buy</Button></Link> : <Link to='/Login'><Button>Register now</Button></Link>
+            user ? <Link onClick={scrollTop} to='/Login'><Button>Buy</Button></Link> : <Link onClick={scrollTop} to='/Login'><Button>Register now</Button></Link>
           }
           </div>
         

@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import Button2 from './Button2';
+import { scrollTop } from './ScrollTop';
 
 
-const Card = ({ discover, custom ,order ,image ,text , img , blogTitle}) => {
+const Card = ({ item , custom ,order ,image ,text , img , blogTitle}) => {
 
     const containerClassName = `bg-[#F7F7F7] py-[40px] px-[20px] flex items-center lg:gap-5 gap-4 rounded-[20px] duration-300 group hover:bg-[#f5ececfd] ${custom}`;
     const textClassName = `text-2xl font-medium max-w-[200px] lg:text-3xl ${text}`;
@@ -10,14 +11,14 @@ const Card = ({ discover, custom ,order ,image ,text , img , blogTitle}) => {
     const orderClassname = `flex items-start gap-4 flex-col ${order}`;
 
   return (
-    <Link to={discover.label} className={containerClassName}>
+    <Link onClick={scrollTop} to={`/Trainings/${item.slug}`} className={containerClassName}>
       <div className={orderClassname}>
-        <h5 className={textClassName}>{discover.title}</h5>
-        <p className='lg:text-base text-sm font-normal'>{discover.paragraf}</p>
+        <h5 className={textClassName}>{item.title}</h5>
+        <p className='lg:text-base text-sm font-normal'>{item.paragraf}</p>
         <div className='flexBetween w-full'>
           <Button2 />
           {blogTitle && <div className='bg-[#E43D300F] text-center rounded-full text-sm text-red-600 py-2 px-7'>
-            {discover.blogTitle}
+            {item.blogTitle}
           </div>}
         </div>
       </div>

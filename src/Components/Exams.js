@@ -13,10 +13,10 @@ const Exams = () => {
                 {EXAMS_ITEMS.map((discover,index) => (
                     <div className='col-span-1' key={index}>
                         <Card
-                        order='order-1 '
+                        order='order-1'
                         image={Crown}
                         custom='flex-col gap-7'
-                        discover={discover}
+                        item={discover}
                         />
                     </div>
                 ))}

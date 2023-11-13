@@ -5,33 +5,9 @@ import Card from './Card';
 import Button from './Button';
 import { Link } from 'react-router-dom';
 import { scrollTop } from './ScrollTop';
+import { BLOG_ITEMS } from '../data';
 
 const Blog = ({toPage}) => {
-
-    const blogItems = [
-        {
-          title: 'Banking intermediation',
-          paragraf: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo',
-          img: '../assets/img/our_tran_img.png',
-          label: '#1',
-          blogTitle:'Blog'
-        },
-        {
-            title: 'Banking intermediation',
-            paragraf: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo',
-            img: '../assets/img/our_tran_img.png',
-            label: '#1',
-            blogTitle:'Blog'
-          },
-          {
-            title: 'Banking intermediation',
-            paragraf: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo',
-            img: '../assets/img/our_tran_img.png',
-            label: '#1',
-            blogTitle:'Blog'
-          },
-        
-      ];
 
   return (
     <section className='mt-[148px]'>
@@ -51,7 +27,7 @@ const Blog = ({toPage}) => {
                 </div>
                 <div className='col-span-1 '>
                     <div className='flex flex-col gap-[40px]'>
-                        {blogItems.map((discover,index) => (
+                        {BLOG_ITEMS.map((discover,index) => (
                         <div className='col-span-1' key={index}>    
                             <Card
                             custom='lg:flex-row flex-col bg-white !p-0 hover:!bg-white justify-between gap-5'
@@ -59,7 +35,7 @@ const Blog = ({toPage}) => {
                             text='max-w-full'
                             img='w-[198px] h-[168px]'
                             blogTitle='Blog' 
-                            discover={discover}
+                            item={discover}
                             image={Blogpic}/>   
                         </div>
                         ))}

@@ -1,9 +1,6 @@
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
 import Down from '../assets/img/arrow_down.svg';
 import { Popover } from '@headlessui/react';
 import classNames from "classnames"
-import i18n from './i18n';
 import { useTranslation } from 'react-i18next';
 
 

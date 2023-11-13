@@ -1,11 +1,9 @@
 import React from 'react'
-import Wrapper from '../../Components/Wrapper'
 import LoginWrapper from '../../Components/LoginWrapper'
 import Input from '../../Components/Input'
 import Breadcumb from '../../Components/Breadcumb'
 import Button from '../../Components/Button'
-import { Link, Outlet } from 'react-router-dom'
-import RadioDefault from '../../Components/Radio'
+
 
 const ForgotPass = () => {
   return (

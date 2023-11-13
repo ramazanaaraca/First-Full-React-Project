@@ -24,7 +24,7 @@ const NewsPage = () => {
         order="order-1"
         ForCol={true}
         className='mt-[148px]'
-        discover={NEWS_ITEMS}
+        item={NEWS_ITEMS}
         text='!max-w-full'
         />
         <Solution />

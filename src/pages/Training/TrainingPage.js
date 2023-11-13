@@ -20,6 +20,7 @@ const TrainingPage = () => {
           <Training
           key={index}
           {...tran}
+          item={tran}
           >
           </Training>
         ))

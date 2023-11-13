@@ -4,6 +4,7 @@ import Button from './Button';
 import { TRAINING_DATA } from '../data';
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
+import { scrollTop } from './ScrollTop';
 
 
 function TrainingCard({cardText , icon ,  redText}) {
@@ -25,7 +26,7 @@ function TrainingCard({cardText , icon ,  redText}) {
 }
 
 
-const Training = ({info , title , paragraf , cards , border , detail , children }) => {
+const Training = ({info , title , paragraf , cards , border , detail , children , item }) => {
 
 
   return (
@@ -77,9 +78,9 @@ const Training = ({info , title , paragraf , cards , border , detail , children 
                         </div>
                         {
                             detail ? null : <div className='col-span-4 justify-self-end self-end max-lg:mt-5'>
-                                            <Link to='detail'>
-                                                <Button>Learn more</Button>
-                                            </Link>
+                                            <Link onClick={scrollTop} to={`/Trainings/${item.slug}`}>
+                                                <Button ButtonName='div'>Learn more</Button>
+                                            </Link> 
                                             
                                     </div>
                         }

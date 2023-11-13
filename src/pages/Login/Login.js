@@ -3,10 +3,10 @@ import LoginWrapper from '../../Components/LoginWrapper'
 import Input from '../../Components/Input'
 import Breadcumb from '../../Components/Breadcumb'
 import Button from '../../Components/Button'
-import {  Link, Outlet } from 'react-router-dom'
+import {  Link } from 'react-router-dom'
 import { useAuth } from '../../Context/AuthContext'
-import { useNavigate , useLocation } from 'react-router-dom'
-import { useFormik , Formik , Form} from 'formik';
+import { useNavigate } from 'react-router-dom'
+import { Formik , Form} from 'formik';
 import Checkboxx from '../../Components/Checkboxx'
 import {LoginSchema} from '../../Validations/LoginChema'
 import { CreateSchema } from '../../Validations/CreateChema'
@@ -91,7 +91,7 @@ const Login = () => {
 
             onSubmit= { values => {
                 setMail(values)
-
+                scrollTop() 
                 navigate('Register')
             } }
 

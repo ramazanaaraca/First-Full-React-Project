@@ -61,30 +61,30 @@ export const CONTACT_CARD = [
 export const DISCOVER_ITEMS = [ 
   {
     title: 'Take Financial Training 1',
+    slug: 'detail',
     paragraf: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo2',
     img: '../assets/img/our_tran_img.png',
-    label: '#1',
     id: 0
   },
   {
     title: 'Take Financial Training 2',
+    slug: 'detail2',
     paragraf: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo2',
     img: '../assets/img/our_tran_img.png',
-    label: '#2',
     id: 1
   },
   {
     title: 'Take Financial Training 3',
+    slug: 'detail3',
     paragraf: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo3',
     img: '../assets/img/our_tran_img.png',
-    label: '#3',
     id: 2
   },
   {
     title: 'Take Financial Training 4',
+    slug: 'detail4',
     paragraf: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo3',
     img: "../assets/img/our_tran_img.png",
-    label: '#4',
     id: 3
   },
   
@@ -149,6 +149,7 @@ export const TRAINING_DATA = [
   {
     id: 1,
     info:'Workshop',
+    slug:'detail',
     title:'Practice Accounting - Sole proprietorships',
     paragraf: 'Do you want to get hands-on in bookkeeping and save several thousands of euros in the new year?',
     cards: [
@@ -167,6 +168,7 @@ export const TRAINING_DATA = [
     id: 2,
     info:'Workshop',
     title:'ESG & sustainable finance in investment funds',
+    slug:'detail2',
     paragraf: 'Do you want to get hands-on in bookkeeping and save several thousands of euros in the new year?',
     cards: [
       { cardText: 'Bussines 2'},
@@ -184,6 +186,7 @@ export const TRAINING_DATA = [
     id: 3,
     info:'Workshop',
     title:'ESG & sustainable finance in investment funds',
+    slug:'detail3',
     paragraf: 'Do you want to get hands-on in bookkeeping and save several thousands of euros in the new year?',
     cards: [
       { cardText: 'Bussines 2'},
@@ -201,6 +204,7 @@ export const TRAINING_DATA = [
     id: 4,
     info:'Workshop',
     title:'ESG & sustainable finance in investment funds',
+    slug:'detail4',
     paragraf: 'Do you want to get hands-on in bookkeeping and save several thousands of euros in the new year?',
     cards: [
       { cardText: 'Bussines 2'},
@@ -271,6 +275,31 @@ export const EXAMPLES = [
     paragraf2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
     id : 2
   },
+  
+];
+
+export const BLOG_ITEMS = [
+  {
+    title: 'Banking intermediation',
+    paragraf: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo',
+    img: '../assets/img/our_tran_img.png',
+    label: '#1',
+    blogTitle:'Blog'
+  },
+  {
+      title: 'Banking intermediation',
+      paragraf: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo',
+      img: '../assets/img/our_tran_img.png',
+      label: '#1',
+      blogTitle:'Blog'
+    },
+    {
+      title: 'Banking intermediation',
+      paragraf: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo',
+      img: '../assets/img/our_tran_img.png',
+      label: '#1',
+      blogTitle:'Blog'
+    },
   
 ];
 

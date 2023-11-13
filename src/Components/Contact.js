@@ -63,7 +63,6 @@ const Contact = () => {
                             <Input
                             name='message'
                             value={values.message   }
-                            AttName='textarea'  
                             type='textarea' 
                             LabelName='Your Message'/>
                         </div>

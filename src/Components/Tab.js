@@ -1,6 +1,5 @@
-import { useState , useReducer } from "react"
+import {useReducer } from "react"
 import TabButton from "./TabButton"
-import Wrapper from "./Wrapper"
 import { EXAMPLES } from "../data";
 
 
@@ -38,8 +37,8 @@ const Tab = () => {
   return (
     <div className="flex items-start  gap-10 lg:h-[240px] sm:h-[300px] h-[500px] relative mb-[148px]">
         {
-          EXAMPLES.map((tab) => (
-            <div className="flex flex-col ">
+          EXAMPLES.map((tab , index) => (
+            <div className="flex flex-col " key={index}>
                 <div className="flex items-center">
                 <TabButton
                 title={tab.title}

@@ -2,7 +2,7 @@ import '../index.css';
 import Logo from '../assets/img/aviza_academy_logo.svg';
 import Search from '../assets/img/search_icon.svg';
 import User from '../assets/img/black_person.svg';
-import Dropdown from './Dropdown';
+import LangPop from '../Components/langPopover';
 import { Link, NavLink } from 'react-router-dom';
 import { useAuth } from '../Context/AuthContext';
 import {FiMenu , FiX} from 'react-icons/fi'
@@ -119,13 +119,8 @@ const  Header = () => {
                         alt="user" />
                     </NavLink>
                     }
-                        <Dropdown
-                        className={
-                            classNames ({
-                                'max-lg:fixed max-lg:left-0 max-lg:z-[99] max-lg:top-[400px]' : true
-                            })
-                        }
-                        />
+                        <LangPop />
+                        
                     </div>
             </div>
         </div>

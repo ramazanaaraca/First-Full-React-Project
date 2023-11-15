@@ -1,9 +1,7 @@
 import WorkShop from '../assets/img/workshop_img.png';
 import Book from '../assets/img/book.svg';
 import Button from './Button';
-import { TRAINING_DATA } from '../data';
 import { Link } from 'react-router-dom';
-import { useState } from 'react'
 import { scrollTop } from './ScrollTop';
 
 

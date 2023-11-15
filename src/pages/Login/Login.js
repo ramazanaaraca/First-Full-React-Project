@@ -4,17 +4,15 @@ import Input from '../../Components/Input'
 import Breadcumb from '../../Components/Breadcumb'
 import Button from '../../Components/Button'
 import {  Link } from 'react-router-dom'
-import { useAuth } from '../../Context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import { Formik , Form} from 'formik';
 import Checkboxx from '../../Components/Checkboxx'
+import { setUser } from "../../store/auth/actions"
 import {LoginSchema} from '../../Validations/LoginChema'
 import { CreateSchema } from '../../Validations/CreateChema'
 import { scrollTop } from '../../Components/ScrollTop'
 
 const Login = () => {
-
-  const { setUser , setMail } = useAuth();
 
   const navigate = useNavigate();
 
@@ -39,8 +37,9 @@ const Login = () => {
 
             onSubmit= { values => {
                 setUser(values)
-                navigate('/')
-                scrollTop()
+                console.log(values)
+                // navigate('/')
+                // scrollTop()
             } }
 
             validationSchema={LoginSchema} //validasyon işlemi
@@ -90,7 +89,7 @@ const Login = () => {
             }
 
             onSubmit= { values => {
-                setMail(values)
+                console.log(values)
                 scrollTop() 
                 navigate('Register')
             } }

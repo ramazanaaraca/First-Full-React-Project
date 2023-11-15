@@ -4,20 +4,19 @@ import Search from '../assets/img/search_icon.svg';
 import User from '../assets/img/black_person.svg';
 import LangPop from '../Components/langPopover';
 import { Link, NavLink } from 'react-router-dom';
-import { useAuth } from '../Context/AuthContext';
 import {FiMenu , FiX} from 'react-icons/fi'
+import {removeUser } from '../store/auth/actions';
+import { useAuth } from '../store/auth/hooks';
 import { useState } from 'react';
 import classNames from 'classnames';
 import { scrollTop } from './ScrollTop';
 
 const  Header = () => {
 
-  const { user , setUser } = useAuth()
-  const [menu , setMenu] = useState(false)
   
-  const handleOut = () => {
-    setUser(false)
-  }
+  const [menu , setMenu] = useState(false)
+    
+  const user = useAuth()
 
   const handleMenu = () => {
     setMenu((openMenu) => !openMenu)
@@ -90,7 +89,7 @@ const  Header = () => {
                         </div>
                     {
                         user ?
-                        <NavLink onClick={handleOut} to='/Login' 
+                        <NavLink onClick={() => removeUser()} to='/Login' 
                         className={classNames
                             ({
                                 'hidden lg:flex items-center gap-5  rounded-full  text-white duration-300 hover:text-[#E43D30] max-lg:mx-[70px]   max-lg:fixed max-lg:left-0 max-lg:z-[99] max-lg:top-[400px] ' : true ,

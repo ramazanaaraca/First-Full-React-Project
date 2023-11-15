@@ -9,15 +9,15 @@ import Male from '../../assets/img/male_person.png'
 import Female from '../../assets/img/female_person.png'
 import Input from '../../Components/Input'
 import { Link, useParams } from 'react-router-dom';
-import { useAuth } from '../../Context/AuthContext'
+import { useAuth } from '../../store/auth/hooks';
 import { Formik , Form} from 'formik'
 import { NewsSchema } from '../../Validations/NewsChema'
 import { scrollTop } from '../../Components/ScrollTop'
 
 const TrainingDetail = ({traniningRow = 0 , TrainingCol = 1 }) => {
 
-  const {user} = useAuth()
   const {slug} = useParams()
+  const user = useAuth()
 
   return (
     <Wrapper

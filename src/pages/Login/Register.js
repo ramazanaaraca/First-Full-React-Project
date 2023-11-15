@@ -5,14 +5,11 @@ import Breadcumb from '../../Components/Breadcumb'
 import Button from '../../Components/Button'
 import Checkboxx from '../../Components/Checkboxx'
 import { Formik , Form } from 'formik'
-import { useAuth } from '../../Context/AuthContext'
 import Radio from '../../Components/Radio'
 import { RegisterSchema } from '../../Validations/RegisterChema'
 import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
-
-  const { setRegister , mail } = useAuth();
 
   const navigate = useNavigate();
  
@@ -29,7 +26,7 @@ const Register = () => {
             
             initialValues = {
               {
-                email: mail.mail || '',
+                email:'',
                 surName:'',
                 firstName:'',
                 phone:'',
@@ -41,17 +38,17 @@ const Register = () => {
             }
 
             onSubmit = { (values , {resetForm}) => {
-              setRegister(values)
-              resetForm();
-              navigate('/Login')
               console.log(values)
+              // resetForm();
+              // navigate('/Login')
             }}
 
             validationSchema={RegisterSchema}
             
             >
-               {({values}) => (
-                    <Form className='flex items-center justify-center'>
+               {({values }) => (
+                    <Form
+                    className='flex items-center justify-center'>
                       <LoginWrapper className={'md:w-[50%] w-[100%]'} >
                             <div className='flex flex-start flex-col mb-5'>
                               <span className='text-sm font-normal'>Titre</span>

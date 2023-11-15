@@ -4,13 +4,9 @@ import Input from '../../Components/Input'
 import Breadcumb from '../../Components/Breadcumb'
 import Button from '../../Components/Button'
 import { Form, Formik } from 'formik'
-import { useAuth } from '../../Context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 
-
 const ForgotPass = () => {
-
-  const {setMail , mail} = useAuth()
 
   const navigate = useNavigate()
 
@@ -29,15 +25,14 @@ const ForgotPass = () => {
               }
             }
             onSubmit={ values => {
-              setMail(values)
-              
+              console.log(values)
               setTimeout(() => {
                 navigate('/Login')
               }, 2000 );
             }}
 
             >
-              {({values}) => (
+              {({values }) => (
                 <Form className='flex items-center justify-center'>
                   <LoginWrapper className={'md:w-[50%] w-[100%]'} >
                           <p className=' text-base font-normal mb-5'>Forgot your password ? Enter your email address below. In a few minutes, we will send you an e-mail allowing you to set a new password.</p>
@@ -49,7 +44,7 @@ const ForgotPass = () => {
                               LabelName='E-Mail Address'
                               />
                           </div>
-                          {mail && <div className="text-sm text-green-500 font-medium" >Your Submit İs Success</div>}
+                          {/* {mail && <div className="text-sm text-green-500 font-medium" >Your Submit İs Success</div>} */}
                           <div className='flex flex-col items-start mt-5'>
                           <Button type='submit'>Change the password</Button>
                           </div>

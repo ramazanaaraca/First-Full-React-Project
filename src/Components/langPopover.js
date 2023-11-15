@@ -14,7 +14,7 @@ const LangPop = () => {
   }
   
   return (
-    <Popover className='relative'>
+    <Popover className='relative hidden lg:block'>
      {
      
       ({open}) => (
